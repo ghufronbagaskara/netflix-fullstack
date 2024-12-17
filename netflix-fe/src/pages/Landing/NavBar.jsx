@@ -1,17 +1,18 @@
-import { useAtom } from "jotai";
-import { languageAtom } from "../jotai/atoms";
+import OptionLanguage from "../../components/modules/OptionLanguage"
 
 function NavBar() {
-    const [, setLanguage] = useAtom(languageAtom)
-
     return (
-        <div className="navbar">
-            <h3>Netflix</h3>
-            <div>
-                <button className="btn btn-accent btn-active mr-4" onClick={() => setLanguage("id")}>Indonesia</button>
-                <button className="active:bg-red-500 hover:bg-yellow-500" onClick={() => setLanguage("en")}>English</button>
-            </div>
-        </div>
+        <header>
+            <nav className="flex justify-between items-center pr-10 pl-7 py-4">
+                <div>
+                    <img src="../../../public/netflix-logo-icon-dea-afrizal.png" alt="netlix logo" width={105} height={45} />
+                </div>
+                <div className="flex items-center gap-4">
+                    <OptionLanguage />
+                    <button>Sign in</button>
+                </div>
+            </nav>
+        </header>
     )
 }
 

@@ -1,5 +1,4 @@
 import DefaultLayout from '../../components/Layouts/DefaultLayout'
-import '../../App.css'
 
 function Landing() {
 
