@@ -8,7 +8,7 @@ import { languageAtom } from "../../../jotai/atoms.jsx"
 const OptionLanguage = () => {
     const [, setLanguage] = useAtom(languageAtom)
 
-    function handleSelect(event) {
+    function handleSelect(event) {        
         setLanguage(event.target.value)
     }
 

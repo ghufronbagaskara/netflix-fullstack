@@ -1,6 +1,11 @@
 import OptionLanguage from "../../components/modules/OptionLanguage"
+import DeffaultButton from "../../components/modules/DefaultButton"
+import DefaultButton from "../../components/modules/DefaultButton"
+import { useNavigate } from "react-router-dom"
 
 function NavBar() {
+    const navigate = useNavigate()
+
     return (
         <header>
             <nav className="flex justify-between items-center pr-10 pl-7 py-4">
@@ -9,7 +14,7 @@ function NavBar() {
                 </div>
                 <div className="flex items-center gap-4">
                     <OptionLanguage />
-                    <button>Sign in</button>
+                    <DefaultButton text={"Sign In"} onclick={() => navigate("/login")} />
                 </div>
             </nav>
         </header>
