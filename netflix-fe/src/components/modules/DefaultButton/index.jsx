@@ -2,11 +2,11 @@
 const DefaultButton = ({
     text,
     onclick,
-    styles = "bg-red-600 text-white py-1 px-3 rounded",
+    styles,
     isArrowIcon = false
 }) => {
     return (
-        <button className={`${styles}`} onClick={onclick}>
+        <button className={`bg-red-600 text-white py-1 px-4 rounded ${styles}`} onClick={onclick}>
             {text}
             {isArrowIcon && (
                 <svg
